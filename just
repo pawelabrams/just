@@ -2,6 +2,7 @@
 
 # config
 github_username = 'pawelabrams'
+transmission_credentials = 'transmission:transmission'
 
 # imports
 import sys
