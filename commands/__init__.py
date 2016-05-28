@@ -1,9 +1,11 @@
-__all__ = ['echo', 'github']
+__all__ = ['echo', 'install', 'github']
 
 from . import *
 
 cmds = {
   'echo': echo.echo,
+  'apt': install.install,
+  'install': install.install,
   'clone': github.clone,
 }
 
