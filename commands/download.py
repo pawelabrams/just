@@ -1,7 +1,7 @@
 from subprocess import check_output, STDOUT
 
 def torrent(filename):
-    out = check_output(["transmission-remote", "-n", "\"transmission:transmission\"", "-a"] + filename)
+    out = check_output(["transmission-remote", "-n", "\"transmission:transmission\"", "-a", filename])
 
 def download(args):
     if args[0][:14] == 'https://kat.cr':
