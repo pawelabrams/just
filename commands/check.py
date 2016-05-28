@@ -3,7 +3,7 @@ from __main__ import transmission_credentials
 
 def check_downloads():
     out = check_output(["transmission-remote", "-n", transmission_credentials, "-l"])
-    print(out)
+    print(out.decode('utf-8'))
 
 def check(args):
     if args[0][:8] == 'download':
