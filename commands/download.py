@@ -2,7 +2,7 @@ from subprocess import check_output, STDOUT
 from __main__ import transmission_credentials
 
 def torrent(filename):
-    out = check_output(["transmission-remote", "-n", transmission_credentials, "-a"] + filename)
+    out = check_output(["transmission-remote", "-n", transmission_credentials, "-a", filename])
 
 def download(args):
     if args[0][:14] == 'https://kat.cr':
