@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+# config
+github_username = 'pawelabrams'
+
 # imports
 import sys
 from commands import *
