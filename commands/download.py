@@ -3,6 +3,8 @@ from __main__ import transmission_credentials
 
 def torrent(filename):
     out = check_output(["transmission-remote", "-n", transmission_credentials, "-a", filename])
+    if not out:
+        print('Wszystko poszło jak po maśle; sprawdź postęp just check downloads')
 
 def download(args):
     if args[0][:14] == 'https://kat.cr':
