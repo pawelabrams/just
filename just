@@ -12,6 +12,13 @@ default_config = {
     },
     "transmission": {
         "credentials": "transmission:transmission"
+    },
+    "aliases": {
+        "i": "install",
+        "d": "download",
+        "e": "echo",
+        "ch": "check",
+        "c": "clone"
     }
 }
 
