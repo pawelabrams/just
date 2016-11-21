@@ -1,6 +1,8 @@
 from subprocess import check_output, STDOUT
+from shutil import which
 
-def install(args):
+
+def install_debian(args):
     out = check_output(["sudo", "apt-get", "install", "-y"] + args)
     changed_packages = []
     for line in out.decode("utf-8").splitlines():
@@ -12,3 +14,15 @@ def install(args):
         print('Zmieniłem pakiet(y) ' + ' '.join(changed_packages))
     else:
         print('Nie znalazłem pakietu do zmiany')
+
+
+def install_arch(args):
+    out = check_output(["sudo", "pacman", "--noconfirm", "-S"] + args)
+    print("Zainstalowane.")
+
+
+def install(args):
+    if which("apt") is not None:
+        install_debian(args)
+    elif which("pacman") is not None:
+        install_arch(args)
