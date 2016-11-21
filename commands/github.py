@@ -1,5 +1,7 @@
 from subprocess import check_output, STDOUT
-from __main__ import github_username
+from __main__ import config
+
+github_username = config.get('github', 'username')
 
 def clone(args):
     if args[0].find('/') < 0:
