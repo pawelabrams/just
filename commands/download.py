@@ -1,5 +1,7 @@
 from subprocess import check_output, STDOUT
-from __main__ import transmission_credentials
+from __main__ import config
+
+transmission_credentials = config.get('transmission', 'credentials')
 
 def torrent(filename):
     out = check_output(["transmission-remote", "-n", transmission_credentials, "-a", filename])
